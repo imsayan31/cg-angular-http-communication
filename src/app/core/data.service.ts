@@ -45,7 +45,7 @@ export class DataService {
 
   private httpHandleError(error: HttpErrorResponse): Observable<BookTrackerError>{
     let dataError = new BookTrackerError();
-    dataError.errorNumber = 500;
+    dataError.errorNumber = 100;
     dataError.message = error.statusText;
     dataError.friendlyMessage = 'An unexpected error occured.';
     return throwError(dataError);
